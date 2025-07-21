@@ -1,116 +1,184 @@
-
+/* Reset & Base */
 body {
-
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Navigation Styles */
+nav {
+  background-color: #0f1337;
+}
 nav ul {
-	list-style-type: none;
-	overflow: hidden;
-	background-color: #0f1337;
-	display: table;
-	width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 nav li {
-	display: table-cell
+  flex: 1;
+  text-align: center;
 }
-li a {
-	display: block;
-	color: white;
-	padding: 30px 30px 30px 30px;
-	text-decoration: none;
+nav a {
+  display: block;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
-li a:hover {
-	background-color: rgb(40, 39, 39);
+nav a:hover {
+  background-color: #282727;
 }
 
 /* Header Styles */
-
-
-
-
-/* Main Page Content Styles */
-
-#main,
-#section {
-	display: flex;
-		justify-content: center;
+header.center-title {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1f1f3d;
+  color: white;
+  font-size: 1.8rem;
+}
+header h1 {
+  margin: 0;
+  line-height: 1.4;
 }
 
-#main {
-	background-color: rgba(255,255,255,0.8);
-}
+/* Section Container */
 section {
-	display: flex;
-	justify-content: center;
-
-	width: 80%;
-	margin: auto;
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: auto;
 }
-.center-title {
 
+/* Center Title Utility */
+.center-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 /* About Section Styles */
 #about-sec {
-	display: flex;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#about-sec div {
-	display: inline-flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-evenly;
+#about-sec .about-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 figure {
-	display: flex;
-
+  max-width: 300px;
+  text-align: center;
 }
-
 figure img {
-
+  width: 100%;
+  border-radius: 8px;
+}
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* Aside Styles */
 aside {
-	display: flex;
-	flex-direction: column;
-
+  max-width: 300px;
+}
+aside ul {
+  padding-left: 20px;
+}
+aside li {
+  margin-bottom: 10px;
+}
+aside a {
+  color: #0f1337;
+  text-decoration: underline;
 }
 
-/* Table - Concert Schedule Styles */
-#concert-schedule-sec {
-	max-width: 940px;
-	margin: 0 auto;
-	height: max-content;
-	}
-
-/* Form - Ticket Form Styles */
-form {
-	width: 35vw;
-	margin: auto;
-  }
-
-input[type="text"], input[type="number"] {
-min-height: 15px;
-border-radius: 5px;
-border:1px solid #cccccc;
+/* Concert Schedule Table */
+#concert-schedule-sec table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
-
-input[type="radio"] {
-margin-left: 12px;
+th, td {
+  border: 2px solid #8c6b48;
+  padding: 12px;
 }
-
 th {
-border: 2px solid #8c6b48;
+  background-color: #f3ebe2;
+  color: #333;
 }
-
-table {
-text-align: center;
-margin: 20px auto;
-}
-
 td {
-border: 2px solid #8c6b48;
-width: 300px;
+  background-color: #fffaf5;
+}
+
+/* Form Styles */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+input[type="radio"] {
+  margin: 10px 5px 0 0;
+}
+form input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0f1337;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form input[type="submit"]:hover {
+  background-color: #282727;
+}
+
+/* Footer */
+footer {
+  background-color: #0f1337;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  #about-sec .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  form {
+    width: 90%;
+  }
 }
