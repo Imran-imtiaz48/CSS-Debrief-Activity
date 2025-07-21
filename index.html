@@ -1,157 +1,130 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harry Styles Fanpage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="" />
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#concert-schedule-sec">Concert Schedule</a></li>
+      <li><a href="#ticket-form-sec">Order Tickets</a></li>
+      <li><a href="#contact-sec">Contact Us</a></li>
+    </ul>
+  </nav>
 
-  </head>
+  <!-- Header -->
+  <header class="center-title">
+    <h1>theReal<br>Harry Styles<br>Fanpage</h1>
+  </header>
 
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Concert Schedule</a></li>
-        <li><a href="#">Order Tickets</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-
-    <!-- Header and Page Heading -->
-    <header class="center-title">
-      <h1>
-        theReal <br />
-        Harry Styles <br />
-        Fanpage
-      </h1>
-    </header>
-
-    <!-- Main Page Content -->
-    <main>
+  <main>
 
     <!-- About Section -->
-      <section id="about-sec">
+    <section id="about-sec">
+      <h2>About</h2>
+      <p>
+        Harry Edward Styles is an English singer, songwriter, and actor.
+        His musical career began in 2010 as a solo contestant on the
+        British music competition series The X Factor.
+      </p>
 
-        <h2>About.</h2>
-        <p>Harry Edward Styles is an English singer, songwriter and actor.
-          His musical career began in 2010 as a solo contestant on the
-          British music competition series The X Factor.
+      <div class="about-content">
+        <figure>
+          <img src="./assets/images/harrystyles.png" alt="Harry Styles singing on stage" />
+          <figcaption>
+            Harry Styles performing free concert fundraiser for US wildfire relief
+          </figcaption>
+        </figure>
+
+        <aside>
+          <h3 class="center-title">Facts</h3>
+          <ul>
+            <li>Born: February 1, 1994 (age 28)</li>
+            <li>From Redditch, United Kingdom</li>
+            <li>Height: 6'0"</li>
+            <li>Music Group: One Direction (since 2010)</li>
+            <li><a href="#">See Movies</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Concert Schedule Section -->
+    <section id="concert-schedule-sec">
+      <h2 class="center-title">Touring</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Concert Schedule</th>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>May 27, 2022</td><td>09:00 PM</td><td>Columbus</td></tr>
+          <tr><td>May 28, 2022</td><td>08:00 PM</td><td>Lexington</td></tr>
+          <tr><td>June 3, 2022</td><td>09:00 PM</td><td>Miami</td></tr>
+          <tr><td>June 4, 2022</td><td>07:00 PM</td><td>Dallas</td></tr>
+          <tr><td>June 10, 2022</td><td>10:00 PM</td><td>Bend</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Order Tickets Section -->
+    <section id="ticket-form-sec">
+      <h2 class="center-title">Get Tickets</h2>
+
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Your name" required />
+        <br>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Your email" required />
+        <br>
+
+        <label for="concert-date">Concert Date</label>
+        <input id="concert-date" type="text" name="concert-date" placeholder="MM/DD/YY" required minlength="6" />
+        <br>
+
+        <p>Ticket delivery preference:</p>
+        <input id="paperless" type="radio" name="delivery" value="paperless" required />
+        <label for="paperless">Paperless</label>
+        <br>
+        <input id="us-mail" type="radio" name="delivery" value="us mail" required />
+        <label for="us-mail">US Mail</label>
+        <br>
+
+        <!-- Contact / Message -->
+        <h3 class="center-title">Stay In Touch!</h3>
+        <p>
+          Send us a message -- keep us up to date with new things about Harry, or tell us about your experience on the site.
         </p>
 
-        <div>
-          <figure>
-            <img src="./assets/images/harrystyles.png" alt="harrystyles">
-            <!-- Use the figcaption element for a caption to your image -->
-            <figcaption>
-            Harry Styles performing free concert fundraiser for US wildfire relief
-            </figcaption>
-          </figure>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+        <br>
 
-        <!-- Aside Content -->
-          <aside>
-            <p class="center-title">Facts</p>
-            <ul>
-                <li>Born: February 1, 1994 (age 28 years)</li>
-                <li>From Redditch, United Kingdom</li>
-                <li>Height: 6'0"</li>
-                <li>Music Group: One Direction (since 2010)</li>
-                <li><a href="">See Movies</a></li>
-            </ul>
-          </aside>
-        </div>
-      </section>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
 
-      <!-- Table - Concert Schedule -->
-      <section id="concert-schedule-sec">
-        <h3 class="center-title">Touring</h3>
+  </main>
 
-        <table>
+  <footer id="contact-sec">
+    <p>&copy; 2025 theReal Harry Styles Fanpage. All rights reserved.</p>
+    <p>Designed by Fans, for Fans.</p>
+  </footer>
 
-          <thead>
-            <tr>
-              <th colspan="3">Concert Schedule</th>
-            </tr>
-            <tr>
-              <th>Date</th>
-              <th>Time</th>
-              <th>City</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>May 27, 2022</td>
-              <td class="">09:00 pm</td>
-              <td>Columbus</td>
-            </tr>
-            <tr>
-              <td>May 28, 2022</td>
-              <td class="">08:00 pm</td>
-              <td>Lexington</td>
-            </tr>
-            <tr>
-              <td>June 3, 2022</td>
-              <td class="">09:00 pm</td>
-              <td>Miami</td>
-            </tr>
-            <tr>
-              <td>June 4, 2022</td>
-              <td class="">07:00 pm</td>
-              <td>Dallas</td>
-            </tr>
-            <tr>
-              <td>June 10, 2022</td>
-              <td class="">10:00 pm</td>
-              <td>Bend</td>
-            </tr>
-          </tbody>
-            </table>
-        </section>
-
-      <!-- Order Tickets Section -->
-      <section id="ticket-form-sec">
-        <h4 class="center-title">Get Tickets</h4>
-
-        <!-- Form -->
-        <form>
-
-          <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder=
-  "name" required>
-          <br>
-
-          <label for="email">Email</label>
-          <input id="email" type="text" name="email" placeholder="email" required>
-          <br>
-
-          <label for="concert-date">Concert Date</label>
-          <input id="concert-date" type="text" name="concert-date" placeholder="mm/dd/yy" required minlength="6">
-          <br>
-
-          <!--Radio button-->
-          <span>Ticket delivery preference:</span>
-          <br>
-          <input id="paperless" type="radio" name="answer" value="paperless" required>
-          <label for="paperless">paperless</label>
-          <br>
-          <input id="us mail" type="radio" name="answer" value="us mail" required>
-          <label for="us mail">us mail</label>
-          <br>
-
-          <h4 class="center-title">Stay In Touch!</h4>
-          <p>Send us a message -- keep us up to date with new things about Harry, or tell us about your user expereince on the site.</p>
-          <!-- Textbox -->
-          <label for="message"></label>
-          <textarea id="message" rows="8" cols="40" required></textarea>
-          <br>
-          <input type="submit" value="Submit">
-        </form>
-      </section>
-
-    </main>
-    <footer>
-      <p></p>
-      <p></p>
-    </footer>
-  </body>
+</body>
 </html>
